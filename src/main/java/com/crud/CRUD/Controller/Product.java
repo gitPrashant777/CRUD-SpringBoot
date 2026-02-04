@@ -8,6 +8,7 @@ import com.crud.CRUD.Model.ProductModel;
 import com.crud.CRUD.Services.ProductServices;
 
 @RestController
+@RequestMapping("/products")
 public class Product {
 
     private final ProductServices services;
@@ -21,23 +22,33 @@ public class Product {
         return "Hello Prashant Kumar";
     }
 
-    @GetMapping("/products")
+    // POST - add product
+    @PostMapping
+    public ProductModel addProduct(@RequestBody ProductModel product) {
+        return services.addProduct(product);
+    }
+
+    // GET - all products
+    @GetMapping
     public List<ProductModel> getAllProducts() {
         return services.showProducts();
     }
 
-    @GetMapping("/products/{id}")
+    // GET - product by id
+    @GetMapping("/{id}")
     public ProductModel getProductById(@PathVariable int id) {
         return services.productById(id);
     }
-    
-    @PutMapping("/products")
-    public void update(@RequestBody ProductModel product) {
-        services.updateproduct(product);
-    }
-    @DeleteMapping("/products")
-    public void delete(@RequestBody ProductModel product) {
-        services.deleteproduct(product);
+
+    // PUT - update product
+    @PutMapping
+    public ProductModel update(@RequestBody ProductModel product) {
+        return services.updateProduct(product);
     }
 
+    // DELETE - delete by id
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable int id) {
+        services.deleteProduct(id);
+    }
 }
