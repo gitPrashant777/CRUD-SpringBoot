@@ -1,4 +1,4 @@
-# Smart Attendance System Backend
+# Smart Attendance Backend
 
 Spring Boot REST backend for managing:
 
@@ -40,7 +40,7 @@ Or build first:
 
 ```bash
 mvn clean package
-java -jar target/smart-attendance-system-0.0.1-SNAPSHOT.jar
+java -jar target/smart-attendance-backend-0.0.1-SNAPSHOT.jar
 ```
 
 ## H2 Console

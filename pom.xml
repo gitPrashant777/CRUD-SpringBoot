@@ -5,10 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>smart-attendance-system</artifactId>
+    <artifactId>smart-attendance-backend</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>smart-attendance-system</name>
-    <description>Smart attendance system backend for students, teachers, lectures, attendance, sections, and departments.</description>
+    <name>Smart Attendance Backend</name>
+    <description>Smart Attendance Backend for students, teachers, lectures, attendance, sections, and departments.</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
